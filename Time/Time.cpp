@@ -90,5 +90,8 @@ void Time::setHours(int hours) {
 }
 
 void Time::setMinutes(int minutes) {
-    Time::minutes = minutes;
+    if (minutes == 60)
+        Time::minutes = 0;
+    else
+        Time::minutes = minutes;
 }
