@@ -5,10 +5,6 @@
 using namespace std;
 
 class TimeTests : TestTemplate {
-private:
-    static void printTimeInfo(Time* time) {
-        cout << "Time object: " << time->getHours() << ":" << time->getMinutes() << endl;
-    }
 public:
     static void testAddHours() {
         cout << "Adding 15 hours to 10:00. Should be 1:00..." << endl;
