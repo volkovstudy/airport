@@ -58,4 +58,14 @@ public:
 
         printTestResult(isMinutesRemovedCorrectly == isHoursChangedCorrectly);
     }
+    static void testChanging24Hours() {
+        cout << "Changing the 24th hour to 0..." << endl;
+
+        Time* time = new Time(23, 0);
+        time->addHours(1);
+
+        bool isHourChanged = time->getHours() == 0;
+
+        printTestResult(isHourChanged);
+    }
 };

@@ -19,4 +19,6 @@ void testTimeClass() {
     TimeTests::testAddMinutes();
     cout << endl;
     TimeTests::testMinusMinutes();
+    cout << endl;
+    TimeTests::testChanging24Hours();
 }
