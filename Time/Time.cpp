@@ -1,4 +1,4 @@
-#include <math.h>
+#include <cmath>
 #include "Time.h"
 
 #define hoursInDay 24
