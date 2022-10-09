@@ -4,7 +4,10 @@
 #define hoursInDay 24
 #define minutesInHour 60
 
-Time::Time(int hours, int minutes) : hours(hours), minutes(minutes) {}
+Time::Time(int hours, int minutes) {
+    setHours(hours);
+    setMinutes(minutes);
+}
 
 void Time::addHours(int hours) {
     if (hours <= 0) return;
@@ -15,9 +18,9 @@ void Time::addHours(int hours) {
         int amountOfDays = tempResult / hoursInDay;
         int difference = tempResult - hoursInDay * amountOfDays;
 
-        this->hours = difference;
+        setHours(difference);
     } else {
-        this->hours = tempResult;
+        setHours(tempResult);
     }
 }
 
@@ -33,9 +36,9 @@ void Time::minusHours(int hours) {
         int removedDaysResult = (positiveResult - (amountOfDays * hoursInDay));
         int difference = hoursInDay - removedDaysResult;
 
-        this->hours = difference;
+        setHours(difference);
     } else {
-        this->hours = tempResult;
+        setHours(tempResult);
     }
 }
 
@@ -48,10 +51,10 @@ void Time::addMinutes(int minutes) {
         int amountOfHours = tempResult / minutesInHour;
         int difference = tempResult - minutesInHour * amountOfHours;
 
-        this->minutes = difference;
+        setMinutes(difference);
         addHours(amountOfHours);
     } else {
-        this->minutes = tempResult;
+        setMinutes(tempResult);
     }
 }
 
@@ -67,10 +70,10 @@ void Time::minusMinutes(int minutes) {
         int removedHoursResult = (positiveResult - (amountOfHours * minutesInHour));
         int difference = minutesInHour - removedHoursResult;
 
-        this->minutes = difference;
+        setMinutes(difference);
         minusHours(amountOfHours+1); // +1 because of main hour in minutes variable
     } else {
-        this->minutes = tempResult;
+        setMinutes(tempResult);
     }
 }
 
