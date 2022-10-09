@@ -1,6 +1,9 @@
 #ifndef AIRPORT_TIME_H
 #define AIRPORT_TIME_H
 
+#include <string>
+
+using namespace std;
 
 class Time {
 private:
@@ -13,6 +16,8 @@ public:
 
     void addMinutes(int minutes);
     void minusMinutes(int minutes);
+
+    string toString() const;
 
     int getHours() const;
     int getMinutes() const;

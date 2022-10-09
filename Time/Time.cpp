@@ -77,6 +77,13 @@ void Time::minusMinutes(int minutes) {
     }
 }
 
+string Time::toString() const {
+    string hours = to_string(Time::hours);
+    string minutes = to_string(Time::minutes);
+
+    return hours + ":" + minutes;
+}
+
 int Time::getHours() const {
     return hours;
 }
