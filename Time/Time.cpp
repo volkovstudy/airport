@@ -79,7 +79,12 @@ void Time::minusMinutes(int minutes) {
 
 string Time::toString() const {
     string hours = to_string(Time::hours);
+    if (Time::hours % 10 == 0)
+        hours += "0";
+
     string minutes = to_string(Time::minutes);
+    if (Time::minutes % 10 == 0)
+        minutes += "0";
 
     return hours + ":" + minutes;
 }
