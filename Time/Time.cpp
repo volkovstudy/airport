@@ -83,7 +83,10 @@ int Time::getMinutes() const {
 }
 
 void Time::setHours(int hours) {
-    Time::hours = hours;
+    if (hours == 24)
+        Time::hours = 0;
+    else
+        Time::hours = hours;
 }
 
 void Time::setMinutes(int minutes) {
