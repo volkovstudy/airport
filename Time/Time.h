@@ -16,6 +16,9 @@ public:
 
     int getHours() const;
     int getMinutes() const;
+
+    void setHours(int hours);
+    void setMinutes(int minutes);
 };
 
 

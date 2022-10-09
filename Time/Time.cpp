@@ -81,3 +81,11 @@ int Time::getHours() const {
 int Time::getMinutes() const {
     return minutes;
 }
+
+void Time::setHours(int hours) {
+    Time::hours = hours;
+}
+
+void Time::setMinutes(int minutes) {
+    Time::minutes = minutes;
+}
