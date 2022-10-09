@@ -1,17 +1,11 @@
 #include <iostream>
 #include "../Time/Time.h"
+#include "TestTemplate.h"
 
 using namespace std;
 
-class TimeTests {
+class TimeTests : TestTemplate {
 private:
-    static void printTestResult(bool result) {
-        if (result)
-            cout << "[DONE] Test passed!";
-        else
-            cout << "[FAIL] Test failed...";
-        cout << endl;
-    }
     static void printTimeInfo(Time* time) {
         cout << "Time object: " << time->getHours() << ":" << time->getMinutes() << endl;
     }
