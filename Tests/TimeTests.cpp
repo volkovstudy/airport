@@ -61,9 +61,9 @@ public:
     static void testToString() {
         cout << "Converting object values to string..." << endl;
 
-        Time* time = new Time(0, 0);
+        Time* time = new Time(0, 5);
 
-        string expected = "00:00";
+        string expected = "00:05";
         string actual = time->toString();
 
         bool isConvertedRight = std::equal(actual.begin(), actual.end(), expected.begin(), expected.end());
