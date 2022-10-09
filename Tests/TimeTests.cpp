@@ -68,4 +68,14 @@ public:
 
         printTestResult(isHourChanged);
     }
+    static void testChanging60Minutes() {
+        cout << "Changing the 60th minute to 0..." << endl;
+
+        Time* time = new Time(12, 59);
+        time->addMinutes(1);
+
+        bool isMinutesChanged = time->getMinutes() == 0;
+
+        printTestResult(isMinutesChanged);
+    }
 };
