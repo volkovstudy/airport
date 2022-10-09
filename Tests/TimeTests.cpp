@@ -58,6 +58,18 @@ public:
 
         printTestResult(isMinutesRemovedCorrectly == isHoursChangedCorrectly);
     }
+    static void testToString() {
+        cout << "Converting object values to string..." << endl;
+
+        Time* time = new Time(12, 59);
+
+        string actual = time->toString();
+        string expected = "12:00";
+
+        bool isConvertedRight = std::equal(actual.begin(), actual.end(), expected.begin(), expected.end());
+
+        printTestResult(isConvertedRight);
+    }
     static void testChanging24Hours() {
         cout << "Changing the 24th hour to 0..." << endl;
 

@@ -23,4 +23,6 @@ void testTimeClass() {
     TimeTests::testChanging24Hours();
     cout << endl;
     TimeTests::testChanging60Minutes();
+    cout << endl;
+    TimeTests::testToString();
 }
