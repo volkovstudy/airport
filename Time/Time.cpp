@@ -87,13 +87,13 @@ string Time::toString() const {
     if (Time::hours / 10 == 0)
         hoursString = "0" + to_string(Time::hours);
 
-    string minutes = to_string(Time::minutes);
+    string minutesString = to_string(Time::minutes);
     if (Time::minutes % 10 == 0)
-        minutes = to_string(Time::minutes) + "0";
+        minutesString = to_string(Time::minutes) + "0";
     if (Time::minutes / 10 == 0)
-        minutes = "0" + to_string(Time::minutes);
+        minutesString = "0" + to_string(Time::minutes);
 
-    return hoursString + ":" + minutes;
+    return hoursString + ":" + minutesString;
 }
 
 int Time::getHours() const {
