@@ -23,13 +23,13 @@ int main() {
 }
 
 Time* getArrivalTime(Time* departureTime, Time* timeInFly) {
-    departureTime->addHours(timeInFly->getHours());
-    departureTime->addMinutes(timeInFly->getMinutes());
+    int departureHours = departureTime->getHours();
+    int departureMinutes = departureTime->getMinutes();
 
-    int arrivalHours = departureTime->getHours();
-    int arrivalMinutes = departureTime->getMinutes();
+    Time* arrivalTime = new Time(departureHours, departureMinutes);
 
-    Time* arrivalTime = new Time(arrivalHours, arrivalMinutes);
+    arrivalTime->addHours(timeInFly->getHours());
+    arrivalTime->addMinutes(timeInFly->getMinutes());
 
     return arrivalTime;
 }
