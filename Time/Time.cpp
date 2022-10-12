@@ -81,11 +81,11 @@ void Time::minusMinutes(int minutes) {
 }
 
 string Time::toString() const {
-    string hours = to_string(Time::hours);
+    string hoursString = to_string(Time::hours);
     if (Time::hours % 10 == 0)
-        hours = to_string(Time::hours) + "0";
+        hoursString = to_string(Time::hours) + "0";
     if (Time::hours / 10 == 0)
-        hours = "0" + to_string(Time::hours);
+        hoursString = "0" + to_string(Time::hours);
 
     string minutes = to_string(Time::minutes);
     if (Time::minutes % 10 == 0)
@@ -93,7 +93,7 @@ string Time::toString() const {
     if (Time::minutes / 10 == 0)
         minutes = "0" + to_string(Time::minutes);
 
-    return hours + ":" + minutes;
+    return hoursString + ":" + minutes;
 }
 
 int Time::getHours() const {
