@@ -53,6 +53,9 @@ void Time::addMinutes(int minutes) {
 
         setMinutes(difference);
         addHours(amountOfHours);
+    } else if (tempResult == minutesInHour) {
+        setMinutes(tempResult);
+        addHours(1);
     } else {
         setMinutes(tempResult);
     }
