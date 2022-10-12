@@ -2,12 +2,14 @@
 #include "TimeTests.cpp"
 #include "TimeConverterTests.cpp"
 #include "TimeAdderTests.cpp"
+#include "ProjectTests.cpp"
 
 using namespace std;
 
 void testTimeClass();
 void testTimeConverterClass();
 void testTimeAdderClass();
+void testProject();
 
 int main() {
     cout << "Tests of Time class:" << endl;
@@ -20,6 +22,10 @@ int main() {
 
     cout << "Tests for TimeAdder class" << endl;
     testTimeAdderClass();
+    cout << endl << endl;
+
+    cout << "Tests of whole project" << endl;
+    testProject();
 
     return 0;
 }
@@ -46,4 +52,8 @@ void testTimeConverterClass() {
 
 void testTimeAdderClass() {
     TimeAdderTests::testSumTimes();
+}
+
+void testProject() {
+    ProjectTests::testProject("9:45", "0:15", "09:45 00:15 10:00");
 }
