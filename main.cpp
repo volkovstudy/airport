@@ -14,9 +14,10 @@ int main() {
 
     Time* arrivalTime = TimeAdder::sumTimes(departureTime, timeInFly);
 
-    cout << departureTimeString << " ";
-    cout << timeInFlyString << " ";
-    cout << arrivalTime->toString() << endl;
+    cout << departureTime->toString() << " ";
+    cout << timeInFly->toString() << " ";
+    cout << arrivalTime->toString();
+    cout << endl;
 
     return 0;
 }
