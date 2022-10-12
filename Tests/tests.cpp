@@ -1,11 +1,13 @@
 #include <iostream>
 #include "TimeTests.cpp"
 #include "TimeConverterTests.cpp"
+#include "TimeAdderTests.cpp"
 
 using namespace std;
 
 void testTimeClass();
 void testTimeConverterClass();
+void testTimeAdderClass();
 
 int main() {
     cout << "Tests of Time class:" << endl;
@@ -14,6 +16,10 @@ int main() {
 
     cout << "Tests of TimeConverter class" << endl;
     testTimeConverterClass();
+    cout << endl << endl;
+
+    cout << "Tests for TimeAdder class" << endl;
+    testTimeAdderClass();
 
     return 0;
 }
@@ -36,4 +42,8 @@ void testTimeClass() {
 
 void testTimeConverterClass() {
     TimeConverterTests::testConvertFromString();
+}
+
+void testTimeAdderClass() {
+    TimeAdderTests::testSumTimes();
 }
